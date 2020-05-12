@@ -20,6 +20,8 @@ import DocumentPicker from 'react-native-document-picker';
 import api from '../config/api';
 import {Alert, ActivityIndicator} from 'react-native';
 
+const url = 'SEU IP';
+
 const titularidade = ['Bacharel', 'Mestrado', 'Doutorado', 'Phd'];
 const Teacher = ({navigation}) => {
   const [name, setName] = useState('');
@@ -72,7 +74,7 @@ const Teacher = ({navigation}) => {
   async function sendAvatar(id) {
     RNFetchBlob.fetch(
       'POST',
-      `http://localhost/update-avatar/${id}`,
+      `http://${url}/update-avatar/${id}`,
       {
         otherHeader: 'foo',
         'Content-Type': 'multipart/form-data',
@@ -84,7 +86,7 @@ const Teacher = ({navigation}) => {
   async function Video(id) {
     RNFetchBlob.fetch(
       'POST',
-      `http://localhost/update-apresentation/${id}`,
+      `http://${url}/update-apresentation/${id}`,
       {
         otherHeader: 'foo',
         'Content-Type': 'multipart/form-data',
@@ -102,7 +104,7 @@ const Teacher = ({navigation}) => {
   async function Pdf(id) {
     RNFetchBlob.fetch(
       'POST',
-      `http://localhost/update-curriculum/${id}`,
+      `http://${url}/update-curriculum/${id}`,
       {
         otherHeader: 'foo',
         'Content-Type': 'multipart/form-data',
