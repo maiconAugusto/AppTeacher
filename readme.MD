@@ -1,4 +1,4 @@
-# Dependencias
+# Dependências
 - Rode na raiz do projeto um yarn ou npm para instalar as dependências necessárias .
 
 # API
